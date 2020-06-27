@@ -1,0 +1,49 @@
+
+
+apply plugin: 'java'
+
+apply plugin: 'idea'
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-stream_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-http_2.13', version: '10.2.0-RC1'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-remote_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-persistence_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-http-spray-json_2.13', version: '10.2.0-RC1'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster-tools_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster-sharding_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-actor-typed_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-distributed-data_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-persistence-cassandra_2.13', version: '1.0.1'
+    compile group: 'com.typesafe.akka', name: 'akka-discovery_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-protobuf_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster-metrics_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-http-jackson_2.13', version: '10.2.0-RC1'
+    compile group: 'com.typesafe.akka', name: 'akka-persistence-typed_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-stream-typed_2.13', version: '2.6.6'
+    compile group: 'com.typesafe.akka', name: 'akka-persistence-testkit_2.13', version: '2.6.6'
+    compile group: 'com.lightbend.akka', name: 'akka-stream-alpakka-slick_2.12', version: '0.12'
+
+    // Declare the dependency for your favourite test framework you want to use in your tests.
+    // TestNG is also supported by the Gradle Test task. Just change the
+    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
+    // 'test.useTestNG()' to your build script.
+    testCompile 'junit:junit:4.12'
+    testCompile group: 'com.typesafe.akka', name: 'akka-testkit_2.13', version: '2.6.6'
+    testCompile group: 'com.typesafe.akka', name: 'akka-stream-testkit_2.13', version: '2.6.6'
+    testCompile group: 'com.typesafe.akka', name: 'akka-http-testkit_2.13', version: '10.2.0-RC1'
+    testCompile group: 'com.typesafe.akka', name: 'akka-actor-testkit-typed_2.13', version: '2.6.6'
+    testCompile group: 'com.typesafe.akka', name: 'akka-serialization-jackson_2.13', version: '2.6.6'
+
+}
